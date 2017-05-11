@@ -14,3 +14,16 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/user', function ()
+  {
+    return view('user/indexuser');
+  });
+Route::resource('/api-indexuser','UserController');
+Route::get('/registeruser', function ()
+  {
+    return view('auth/register');
+  });
