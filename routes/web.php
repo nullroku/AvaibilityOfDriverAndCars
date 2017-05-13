@@ -27,3 +27,9 @@ Route::get('/registeruser', function ()
   {
     return view('auth/register');
   });
+
+Route::get('/car', function ()
+  {
+    return view('/car/indexcar');
+  });
+Route::resource('/api-indexcar','CarController');
